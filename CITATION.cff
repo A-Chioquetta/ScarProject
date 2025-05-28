@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 title: "ScarProject: Quantum Many-Body Simulations of PXP, Rydberg Chains, and Subspace Analysis"
 version: "1.0.0"
-doi: ""  # Optional DOI if registered with Zenodo
+doi: ""  10.5281/zenodo.15531770
 date-released: "2024-05-27"
 authors:
   - family-names: "Chioquetta"
