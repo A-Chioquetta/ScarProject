@@ -5,26 +5,27 @@ import numpy as np
 
 def generate_initial_state(N, basis_strings, pattern='Z2', defect_position=None):
     """
-    Gera um estado inicial no subespaço.
+    Generates an initial state in the constrained subspace.
 
     Parameters
     ----------
     N : int
-        Número de spins.
+        Number of spins in the system.
     basis_strings : list of str
-        Lista dos bitstrings do subspace.
+        List of bitstrings representing the constrained subspace.
     pattern : str
-        Tipo de estado ('Z2', 'Z2_shifted', 'Z0', 'Z1', etc.).
+        Type of initial state ('Z2', 'Z2_shifted', 'Z0', 'Z1', etc.).
     defect_position : int or None
-        Posição do spin a ser flipado (se relevante).
+        Position of the spin to flip (if applicable).
 
     Returns
     -------
     qutip.Qobj
-        Estado no subspace.
+        The generated state in the subspace (as a Qobj ket).
     str
-        Bitstring do estado gerado.
+        The bitstring representation of the generated state.
     """
+
 
     if pattern.lower() == 'z2':
         bitstring = ''.join(['0' if i % 2 == 0 else '1' for i in range(N)])
