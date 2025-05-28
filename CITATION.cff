@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "ScarProject: Quantum Many-Body Simulations of PXP, Rydberg Chains, and Subspace Analysis"
+version: "1.0.0"
+doi: ""  # Optional DOI if registered with Zenodo
+date-released: "2024-05-27"
+authors:
+  - family-names: "Chioquetta"
+    given-names: "Alessandra"
+    orcid: "https://orcid.org/0000-0002-7021-486X"
+    affiliation: "Universidade Federal de Minas Gerais"
+repository-code: "https://github.com/A-Chioquetta/scarproject"
+license: "MIT"
+abstract: >
+  This repository contains quantum many-body simulations focusing on the PXP model,
+  Rydberg chains, Schrieffer-Wolff corrections, and constrained subspace analysis.
+  It includes tools for calculating entanglement entropy, eigenstate overlaps, 
+  and studying the effects of various perturbations in constrained quantum systems.
