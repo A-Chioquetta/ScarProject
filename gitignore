@@ -1,0 +1,42 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.so
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VS Code settings
+.vscode/
+
+# macOS system files
+.DS_Store
+
+# Python virtual environments
+venv/
+env/
+
+# Results and generated data
+results/
+ResultsEvolution/
+ResultsEntropy/
+ResultsSubspace/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Pytest cache
+.cache/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Environment files
+.env

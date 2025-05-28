@@ -1,0 +1,5 @@
+{
+    "python.terminal.executeInFileDir": false,
+    "python.envFile": "${workspaceFolder}/.env",
+    "terminal.integrated.cwd": "${workspaceFolder}"
+}
