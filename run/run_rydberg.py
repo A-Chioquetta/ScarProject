@@ -36,7 +36,11 @@ if __name__ == "__main__":
     header = "time correlation fidelity"
 
     save_results(
-        result=(result['times'], result['correlation'], result['fidelity']),
+        result={
+        'times': result['times'],
+        'correlation': result['correlation'],
+        'overlap': result['overlap']
+    },
         output_dir=output_dir,
         filename=filename,
         header=header

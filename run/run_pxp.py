@@ -31,7 +31,11 @@ if __name__ == "__main__":
     header = "time correlation overlap_with_initial"
 
     save_results(
-        result=(result['times'], result['correlation'], result['overlap']),
+        result={
+        'times': result['times'],
+        'correlation': result['correlation'],
+        'overlap': result['overlap']
+    },
         output_dir=output_dir,
         filename=filename,
         header=header

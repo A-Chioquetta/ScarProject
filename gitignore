@@ -16,11 +16,7 @@ __pycache__/
 venv/
 env/
 
-# Results and generated data
-results/
-ResultsEvolution/
-ResultsEntropy/
-ResultsSubspace/
+
 
 # Build artifacts
 build/
