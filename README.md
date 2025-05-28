@@ -95,3 +95,5 @@ pip install .
 MIT License — free to use, modify, and contribute.
 
 > ✔️ **Note:** This project is professionally structured to be replicable, scalable, and ready for academic use (thesis, paper, presentation) and public repositories such as GitHub and PyPI.
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15531770.svg)](https://doi.org/10.5281/zenodo.15531770)
