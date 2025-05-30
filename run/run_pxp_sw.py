@@ -11,13 +11,13 @@ import numpy as np
 
 if __name__ == "__main__":
     # Parameters
-    N = 8
+    N = 18
     state_name = 'Z2'
     boundary = 'PBC'
     nt = 500
     t_max = 20.0
     V = 10.0
-    W = 1.0
+    W = 2.0
 
     # Run simulation
     result = run_pxp_evolution_with_sw(
@@ -39,9 +39,10 @@ if __name__ == "__main__":
         result={
         'times': result['times'],
         'correlation': result['correlation'],
-        'overlap': result['overlap']
+        'overlap': result['fidelity']
     },
         output_dir=output_dir,
         filename=filename,
-        header=header
+        header=header,
+        W=W
     )

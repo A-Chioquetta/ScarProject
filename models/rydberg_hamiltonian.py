@@ -16,7 +16,7 @@ def build_rydberg_hamiltonian(N, sx_list, q_list, V=10.0, Omega=1.0, boundary='P
         H += V * q_list[n] * q_list[n + 1]
 
     for n in range(N):
-        H += Omega * sx_list[n]
+        H += (Omega/2) * sx_list[n]
 
     if boundary.lower() == 'pbc':
         H += V * q_list[N - 1] * q_list[0]

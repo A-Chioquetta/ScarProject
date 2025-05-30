@@ -55,3 +55,35 @@ def plot_overlap_scatter(eigenvals, log_overlaps, title, output_path=None):
         print(f"Plot saved to {output_path}")
 
     plt.show()
+
+
+def plot_entropy_vs_energy(eigenenergies, entropies, title, output_path=None):
+    """
+    Plot entanglement entropy of eigenstates vs their eigenenergies.
+
+    Parameters
+    ----------
+    eigenenergies : array
+        Eigenvalues of the Hamiltonian.
+    entropies : array
+        Entanglement entropy values corresponding to each eigenstate.
+    title : str
+        Title for the plot.
+    output_path : str or None
+        Path to save the plot as PNG. If None, the plot is shown but not saved.
+    """
+
+    plt.figure(figsize=(10, 6))
+    plt.scatter(eigenenergies, entropies, color='blue', label='Entropy')
+
+    plt.xlabel('Eigenenergy')
+    plt.ylabel('Entanglement Entropy (log₂)')
+    plt.title(title)
+    plt.grid(True)
+    plt.legend()
+
+    if output_path:
+        plt.savefig(output_path, dpi=300, transparent=True)
+        print(f"Plot saved to {output_path}")
+
+    plt.show()

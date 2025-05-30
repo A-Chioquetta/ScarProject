@@ -15,8 +15,9 @@ import matplotlib.pyplot as plt
 
 
 # Parameters
-N = 10
+N = 18
 boundary = 'PBC'
+initial_state = 'Z0'
 
 # Generate subspace
 subspace, basis_strings = generate_pxp_subspace(N=N, boundary=boundary)
@@ -26,7 +27,7 @@ H_sub = build_pxp_hamiltonian_direct_in_subspace(N=N, basis_strings=basis_string
 eigenvals, eigenstates = H_sub.eigenstates()
 
 # Initial state in subspace
-psi_sub, string = generate_initial_state(N, basis_strings, pattern='Z2', defect_position=(N//2))
+psi_sub, string = generate_initial_state(N, basis_strings, pattern=initial_state, defect_position=None)
 print(f"Initial state generated: {string}")
 
 # Compute overlaps
@@ -46,11 +47,11 @@ output_data = np.column_stack((eigenvals, overlaps, np.log2(overlaps)))
 save_results(
     result=output_data,
     output_dir=save_folder,
-    filename=f'overlap_data_N{N}_{boundary}.csv',
+    filename=f'overlap_data_N{N}_{boundary}_{initial_state}.dat',
     header="Eigenenergy Overlap Log2(Overlap)"
 )
 
-print(f"File saved to {save_folder}/overlap_data_N{N}_{boundary}.csv")
+print(f"File saved to {save_folder}/overlap_data_N{N}_{boundary}_{initial_state}.dat")
 
 
 # Plot
@@ -58,5 +59,5 @@ plot_overlap_scatter(
     eigenvals=eigenvals,
     log_overlaps=np.log2(filtered_overlaps),
     title=f'Log2 Overlap with eigenstates (N={N}, {boundary})',
-    output_path=os.path.join(save_folder, f'overlap_plot_N{N}_{boundary}.png')
+    output_path=os.path.join(save_folder, f'overlap_plot_N{N}_{boundary}_{initial_state}.png')
 )

@@ -18,7 +18,7 @@ if __name__ == "__main__":
     t_max = 20.0
     W_max = 0.1
     direction = 'all'       # 'x', 'y', 'z' or 'all'
-    disorder = False        # True for random disorder, False for homogeneous
+    disorder = True        # True for random disorder, False for homogeneous
     projected = False       # True for projected perturbation
 
     W_values = np.arange(0.0, W_max + 0.01, 0.01)

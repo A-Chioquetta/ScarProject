@@ -11,13 +11,13 @@ import numpy as np
 
 if __name__ == "__main__":
     # Parameters
-    N = 8
+    N = 18
     state_name = 'Z2'
     boundary = 'PBC'
     nt = 500
     t_max = 20.0
     V = 10.0
-    Omega = 1.0
+    Omega = 2.0
 
     # Run simulation
     result = run_rydberg_evolution(
@@ -32,16 +32,17 @@ if __name__ == "__main__":
 
     # Save results
     output_dir = f"results/ResultsEvolution/Rydberg_{N}sites_{boundary}"
-    filename = f"evolution_{N}sites_{state_name}_{boundary}.dat"
+    filename = f"evolution_{N}sites_{state_name}_{boundary}_W{Omega}.dat"
     header = "time correlation fidelity"
 
     save_results(
         result={
         'times': result['times'],
         'correlation': result['correlation'],
-        'overlap': result['overlap']
+        'overlap': result['fidelity']
     },
         output_dir=output_dir,
         filename=filename,
-        header=header
+        header=header,
+        W=Omega
     )
